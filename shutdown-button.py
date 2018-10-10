@@ -13,8 +13,6 @@ switch = [24, 18, 23]
 #Pin Assignment for Reboot/Shutdown Function
 power_led = led[4]
 power_button = button[5]
-power_button = 7 #for example
-power_led = 17 #for example
 
 #Set GPIO
 GPIO.setwarnings(False);
@@ -26,10 +24,10 @@ GPIO.output(power_led, True)
 
 # Functions
 def Shutdown ():
-    #os.system("sudo shutdown now")
+    os.system("sudo shutdown now")
     os.system("echo user shutdown requested | wall")
 def Reboot ():
-    #os.system("sudo reboot now")
+    os.system("sudo reboot now")
     os.system("echo user reboot requested | wall")
 
 def BlinkWait(loops):
